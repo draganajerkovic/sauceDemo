@@ -39,7 +39,7 @@ public class CheckoutPage extends BasePage{
         getDriver().findElement(continueButton).click();
     }
 
-    //klik na checkout i popunjavanje forme
+    //filling in the form and clicking checkout
     public void fillInForm(String firstName, String lastName, String zipCode){
         clickCheckoutButton();
         enterFirstName(firstName);
@@ -52,7 +52,7 @@ public class CheckoutPage extends BasePage{
         getDriver().findElement(finishButton).click();
     }
 
-    //potvrda poruke Thank you nakon kupovine
+    //confirmation message Thank you after the purchase
     public String thankYouConfirmation(){
         return getDriver().findElement(thankYouMessage).getText();
     }

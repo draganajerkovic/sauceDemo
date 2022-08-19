@@ -30,19 +30,19 @@ public class LoginPage extends BasePage{
         getDriver().findElement(loginButton).click();
     }
 
-    //metoda za popunjavanje login forme
+    //login form fill in method
     public void userLogin(String username, String password){
         enterUsername(username);
         enterPassword(password);
         clickLoginButton();
     }
 
-    //potvrda da je prebacen na stranicu proizvodi
+    //method for moving to products page
     public String confirmationText(){
         return getDriver().findElement(productText).getText();
     }
 
-    //potvrda da je vidljivo logout dugme nakon logina
+    //confirmation that the logout button is visible after logging in
     public boolean logoutPresent(){
         getDriver().findElement(menu).click();
         getDriverWait().until(ExpectedConditions.elementToBeClickable(By.id("logout_sidebar_link")));

@@ -22,7 +22,7 @@ public class LogoutPage extends BasePage{
         getDriver().findElement(logoutSidebar).click();
     }
 
-    //potvrda da je vidljiv login button nakon logouta
+    //confirmation that the login button is visible after logging out
 
     public boolean loginIsVisible(){
         return getDriver().findElement(loginButton).isDisplayed();
